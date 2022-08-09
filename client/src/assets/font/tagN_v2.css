@@ -1,0 +1,42 @@
+/*
+* {
+    font-family: 'shabnam', serif !important;
+}*/
+
+body {
+    font-family: 'shabnam', serif !important;
+}
+
+/* webkit solution */
+::-webkit-input-placeholder {
+    font-family: 'shabnam', serif !important;
+}
+
+/* mozilla solution */
+input:-moz-placeholder {
+    font-family: 'shabnam', serif !important;
+}
+
+.english {
+    font-family: Tahoma, sans-serif !important;
+}
+
+.farsi {
+    font-family: 'shabnam', serif !important;
+}
+
+.ui-switcher {
+    font-family: Tahoma, sans-serif !important;
+}
+
+.label {
+    font-family: 'shabnam', serif !important;
+}
+
+.badge {
+    font-family: 'shabnam', serif !important;
+}
+
+.v-application {
+  font-family: 'shabnam', serif !important;
+}

@@ -1,0 +1,22 @@
+version: '3' 
+services:
+  client:
+    container_name: vue_client_web
+    build:
+        context: ./docker
+        dockerfile: Dockerfile_nginx_ssg
+    ports:
+        - "8080:80"
+    environment:
+        WWWGROUP: 'www-data'
+        WWWUSER: 'www-data'
+        TZ: 'Asia/Tehran'
+    volumes:
+        - './client:/var/www/web/'
+    networks:
+        - loan-net
+    tty: true
+
+networks:
+  loan-net:
+    driver: bridge

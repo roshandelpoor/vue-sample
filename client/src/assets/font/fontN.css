@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'shabnam';
+    font-style: normal;
+    font-weight: normal; /* = 400 */
+    src: url(webfonts_shabnam/fa/Shabnam-FD.eot);
+    src: url(webfonts_shabnam/fa/Shabnam-FD.eot?#iefix) format('embedded-opentype'),
+    url(webfonts_shabnam/fa/Shabnam-FD.woff) format('woff'),
+    url(webfonts_shabnam/fa/Shabnam-FD.ttf) format('truetype');
+}

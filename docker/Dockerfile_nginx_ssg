@@ -1,0 +1,31 @@
+FROM node:lts-alpine3.15
+
+LABEL maintainer="roshandelpoor"
+LABEL Description="Docker image for VUE with SSR."
+
+# INSTALL PACKAGES
+RUN apk --no-cache --update add  nginx  bash
+# COPY CONFIG FILES
+COPY nginx_ssg.conf /etc/nginx/nginx.conf
+
+# DEFAULT DIRECTORY
+WORKDIR /var/www/web/
+
+# ADD DEFAULT USER
+RUN adduser -D appuser
+# CHANGE PERMISSIONS TO APPUSER
+RUN chown -R appuser:appuser /var/www/web  /var/log  /var/run  /var/tmp  /var/lib  /run
+RUN chmod -R 777 /var/www/web  /var/log  /var/run  /var/tmp  /var/lib  /run
+# RUN CONTAINER AS NON ROOT USER
+USER appuser
+
+# RUN CONTAINER ENTRYPOINT
+RUN chmod 0755 /var/www/web/
+
+# PORT
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+
+
+
